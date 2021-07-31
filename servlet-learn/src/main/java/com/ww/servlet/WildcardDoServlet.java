@@ -19,16 +19,18 @@ public class WildcardDoServlet extends HttpServlet {
 	private static final long serialVersionUID = -7286010708620610377L;
 
 	@Override
-		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			PrintWriter writer = resp.getWriter();
-			resp.setCharacterEncoding("utf-8");
-			try {
-				writer.write("请求:" + req.getContextPath() + "匹配了*.do");
-				System.out.println("请求:" + req.getContextPath() + ",匹配了*.do");
-			} finally {
-				if (Objects.nonNull(writer)) {
-					writer.close();
-				}
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+	
+		PrintWriter writer = resp.getWriter();
+		resp.setCharacterEncoding("utf-8");
+		try {
+			writer.write("请求:" + req.getContextPath() + "匹配了*.do");
+			System.out.println("请求:" + req.getContextPath() + ",匹配了*.do");
+		} finally {
+			if (Objects.nonNull(writer)) {
+				writer.close();
 			}
 		}
+	}
 }

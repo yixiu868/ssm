@@ -1,6 +1,7 @@
 package com.ww.servlet.context;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -9,23 +10,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @Description: 多个Servlet通过ServletContext对象实现数据共享
+ * @Description: ServletContext实现数据共享
  * @author xiaohua
- * @date 2021年7月31日 下午2:59:21
+ * @date 2021年7月31日 下午3:02:32
  */
-public class ServletContextDemo1 extends HttpServlet {
+public class ServletContextDemo2 extends HttpServlet {
 
-	private static final long serialVersionUID = 8866460854339152831L;
+	private static final long serialVersionUID = -2849258529656671562L;
 
-	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String commonData = "公开的密码";
-		
-		// 把数据存入servletContext
 		ServletContext servletContext = getServletContext();
-		servletContext.setAttribute("data", commonData);
-		System.out.println("设置属性data至context");
+		Object data = servletContext.getAttribute("data");
+		if (Objects.nonNull(data)) {
+			System.out.println("获取到context属性值:" + (String) data);
+		}
 	}
 	
 	@Override

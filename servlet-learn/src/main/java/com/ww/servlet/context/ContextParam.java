@@ -9,27 +9,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @Description: 多个Servlet通过ServletContext对象实现数据共享
+ * @Description: 获取context-param配置信息
  * @author xiaohua
- * @date 2021年7月31日 下午2:59:21
+ * @date 2021年7月31日 下午3:20:33
  */
-public class ServletContextDemo1 extends HttpServlet {
+public class ContextParam extends HttpServlet {
 
-	private static final long serialVersionUID = 8866460854339152831L;
+	private static final long serialVersionUID = -5225978792596887888L;
 
-	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String commonData = "公开的密码";
-		
-		// 把数据存入servletContext
-		ServletContext servletContext = getServletContext();
-		servletContext.setAttribute("data", commonData);
-		System.out.println("设置属性data至context");
+		ServletContext context = getServletContext();
+		// 获取context-param初始化参数
+		String parameter = context.getInitParameter("url");
+		System.out.println("配置context-param参数url:" + parameter);
+		resp.getWriter().print(parameter);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
+		super.doPost(req, resp);
 	}
 }
