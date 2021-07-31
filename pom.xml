@@ -8,4 +8,38 @@
   	<module>servlet-learn</module>
   	<module>ssm-learn</module>
   </modules>
+  
+  <dependencyManagement>
+    <dependencies>
+        <!-- servlet -->
+	    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	    <dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>javax.servlet-api</artifactId>
+	        <version>3.1.0</version>
+	        <scope>provided</scope>
+	    </dependency>
+	    
+	    
+	    <!-- jsp -->
+	    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+	    <dependency>
+	        <groupId>javax.servlet.jsp</groupId>
+	        <artifactId>javax.servlet.jsp-api</artifactId>
+	        <version>2.2.1</version>
+	        <scope>provided</scope>
+	    </dependency>
+	    
+	    
+	    <!-- jstl -->
+	    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+	    <dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>jstl</artifactId>
+	        <version>1.1.2</version>
+	    </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+  
 </project>
