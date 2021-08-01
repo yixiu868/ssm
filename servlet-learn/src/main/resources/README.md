@@ -26,3 +26,12 @@
 * 当请求URL为“/xxx/yyy/a.do”时，“/\*”和“*.do”都匹配，哪个servlet响应：
     * Servlet引擎将调用Servlet2。
 * 匹配的原则就是"谁长得更像就找谁"
+
+***
+
+### ServletContext
+包路径：com.ww.servlet.context
+概述：
+* 1、contextParam设置应用级别初始化参数；
+* 2、利用ServletContext加载资源文件；
+* 3、利用ServletContext获取RequestDispatcher，实现请求转发；

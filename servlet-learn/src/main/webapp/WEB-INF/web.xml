@@ -19,14 +19,10 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <!-- context-param -->
   <context-param>
     <param-name>url</param-name>
     <param-value>jdbc:mysql://localhost:3306</param-value>
   </context-param>
-  
-  <!-- servlet -->
   <servlet>
     <servlet-name>wildcard</servlet-name>
     <servlet-class>com.ww.servlet.WildcardServlet</servlet-class>
@@ -35,7 +31,6 @@
     <servlet-name>wildcard</servlet-name>
     <url-pattern>/wildcard</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>wildcardDo</servlet-name>
     <servlet-class>com.ww.servlet.WildcardDoServlet</servlet-class>
@@ -44,7 +39,6 @@
     <servlet-name>wildcardDo</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>context2</servlet-name>
     <servlet-class>com.ww.servlet.context.ServletContextDemo2</servlet-class>
@@ -53,7 +47,6 @@
     <servlet-name>context2</servlet-name>
     <url-pattern>/context2</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>context1</servlet-name>
     <servlet-class>com.ww.servlet.context.ServletContextDemo1</servlet-class>
@@ -62,7 +55,6 @@
     <servlet-name>context1</servlet-name>
     <url-pattern>/context1</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>ctxParam</servlet-name>
     <servlet-class>com.ww.servlet.context.ContextParam</servlet-class>
@@ -71,7 +63,6 @@
     <servlet-name>ctxParam</servlet-name>
     <url-pattern>/ctxParam</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>ctxRes</servlet-name>
     <servlet-class>com.ww.servlet.context.ContextResource</servlet-class>
@@ -80,9 +71,30 @@
     <servlet-name>ctxRes</servlet-name>
     <url-pattern>/ctxRes</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
-  
+  <servlet>
+    <servlet-name>disp</servlet-name>
+    <servlet-class>com.ww.servlet.context.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>disp</servlet-name>
+    <url-pattern>/disp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>disp2</servlet-name>
+    <servlet-class>com.ww.servlet.context.DispatcherServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>disp2</servlet-name>
+    <url-pattern>/disp2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>当前类的类加载器加载资源文件</description>
+    <display-name>ClsLoadResourceServlet</display-name>
+    <servlet-name>ClsLoadResourceServlet</servlet-name>
+    <servlet-class>com.ww.servlet.context.ClsLoadResourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClsLoadResourceServlet</servlet-name>
+    <url-pattern>/clsLoad</url-pattern>
+  </servlet-mapping>
 </web-app>
