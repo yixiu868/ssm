@@ -97,4 +97,43 @@
     <servlet-name>ClsLoadResourceServlet</servlet-name>
     <url-pattern>/clsLoad</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <display-name>output</display-name>
+    <servlet-name>output</servlet-name>
+    <servlet-class>com.ww.servlet.response.OutputStreamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>output</servlet-name>
+    <url-pattern>/output</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>使用PrintWriter向客户端输出中文</description>
+    <display-name>printWriterServlet</display-name>
+    <servlet-name>printWriterServlet</servlet-name>
+    <servlet-class>com.ww.servlet.response.PrintWriterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>printWriterServlet</servlet-name>
+    <url-pattern>/printWriterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Response实现文件下载</description>
+    <display-name>download</display-name>
+    <servlet-name>download</servlet-name>
+    <servlet-class>com.ww.servlet.response.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>download</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>下载中文文件名文件</description>
+    <display-name>downloadChineseServlet</display-name>
+    <servlet-name>downloadChineseServlet</servlet-name>
+    <servlet-class>com.ww.servlet.response.DownloadChineseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>downloadChineseServlet</servlet-name>
+    <url-pattern>/downloadChineseServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

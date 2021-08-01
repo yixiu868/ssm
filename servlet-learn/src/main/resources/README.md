@@ -35,3 +35,15 @@
 * 1、contextParam设置应用级别初始化参数；
 * 2、利用ServletContext加载资源文件；
 * 3、利用ServletContext获取RequestDispatcher，实现请求转发；
+
+***
+
+### web工程中URL地址推荐写法
+在JavaWeb中，只要是写URL地址，那么建议最好以"/"开头，也就是使用绝对路径的方式，那么"/"到底代表什么？**如果"/"是给服务器用的，则代表当前的web工程，如果"/"是给浏览器用的，则代表webapps目录**
+
+* "/"代表当前web工程的常见应用常见
+    * ①ServletContext.getRealPath(String path)获取资源的绝对路径；
+    * ②在服务端forward到其他页面:getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+* "/"代表webapps目录的常见应用场景
+    * ①使用sendRedirect实现请求重定向；
+    * ②超链接跳转；
