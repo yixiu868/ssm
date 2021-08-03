@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.ww</groupId>
@@ -10,7 +11,12 @@
   
   <dependencies>
   
-    <!-- MD5 -->
+    <!-- 文件上传 -->
+    <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+    <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+    </dependency>
     
   
     <!-- commons工具 -->
@@ -39,6 +45,7 @@
 	    <artifactId>commons-pool2</artifactId>
 	    <version>2.4.2</version>
 	</dependency>
+	
 	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
 	<dependency>
 	    <groupId>org.apache.commons</groupId>
@@ -60,8 +67,6 @@
 	    <version>0.9.5.2</version>
 	</dependency>
 	
-    
-  
     <!-- mysql driver -->
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
@@ -69,7 +74,6 @@
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>6.0.6</version>
 	</dependency>
-    
   
     <!-- https://mvnrepository.com/artifact/junit/junit -->
 	<dependency>
@@ -78,8 +82,12 @@
 	    <version>4.12</version>
 	    <scope>test</scope>
 	</dependency>
-  
     
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+    </dependency>
+      
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
@@ -93,6 +101,11 @@
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>jstl</artifactId>
+    </dependency>
+    
+    <dependency>
+       <groupId>taglibs</groupId>
+       <artifactId>standard</artifactId>
     </dependency>
     
   </dependencies>
