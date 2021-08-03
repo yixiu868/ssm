@@ -47,3 +47,12 @@
 * "/"代表webapps目录的常见应用场景
     * ①使用sendRedirect实现请求重定向；
     * ②超链接跳转；
+    
+***
+
+### JavaWeb中的监听器
+#### 监听器分类
+监听的事件源分别为ServletContext，HttpSession和ServletRequest这三个域对象。
+* 1、监听域对象自身的创建和销毁的事件监听器；
+* 2、监听域对象中的属性增加和删除的事件监听器；
+* 3、监听绑定到HttpSession域中的某个对象的状态的事件监听器；
