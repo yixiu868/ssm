@@ -46,7 +46,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 	        <version>1.1.2</version>
 	    </dependency>
 	    
-<<<<<<< HEAD
 	    <!-- 文件上传 -->
 		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
 		<dependency>
@@ -61,10 +60,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 		    <artifactId>commons-io</artifactId>
 		    <version>2.2</version>
 		</dependency>
-		
-=======
->>>>>>> branch 'main' of https://github.com/yixiu868/ssm.git
-
 	    
     </dependencies>
   </dependencyManagement>
