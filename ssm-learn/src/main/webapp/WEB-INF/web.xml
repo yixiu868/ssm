@@ -1,3 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+
+<!-- 配置spring容器配置文件路径 -->
+<!-- contextConfigLocation：告诉Spring MVC其Spring IoC的配置文件在哪里，这样Spring就会找到这些配置文件去加载它们。如果是多个配置文件，可以使用逗号分隔开来， -->
+<!-- 并且它还能支持正则表达式匹配，进行模糊匹配，这样就更加灵活了，默认值为/WEB-INF/applicationContext.xml -->
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <!-- <param-value>classpath*:springContext.xml</param-value> -->
+    <param-value>classpath*:spring-application.xml</param-value>
+</context-param>
+
+<!-- ContextLoaderListener用以初始化Spring IoC容器 -->
+<!-- ContextLoaderListener：实现了接口ServletContextListener，ServletContextListener的作用在整个Web工程前后加入自定义代码，所有可以在Web工程初始化之前，先完成 -->
+<!-- 对Spring IoC容器的初始化，也可以在Web工程关闭之时完成Spring IoC容器的资源进行释放 -->
+<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+<servlet>
+    <!-- 注意：spring MVC框架会根据servlet-name配置，找到/WEB-INF/dispatcher-servlet作为配置文件载入web工程中 -->
+    <!-- 配置了servlet-name为dispatcher，意味着需要一个/WEB-INF/dispatcher-servlet.xml文件（注意，servlet-name和文件名的对应关系） -->
+    <!-- 与之对应，并且我们配置了在服务器启动期间就初始化它 -->
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:dispatcher-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>*.do</url-pattern>
+</servlet-mapping>
+
+    <!--设置字符UTF-8  -->
+	<filter>  
+	      <filter-name>characterEncodingFilter</filter-name> 
+	      <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+	      <init-param>  
+	          <param-name>encoding</param-name>  
+	          <param-value>UTF-8</param-value>  
+	      </init-param>  
+	      <init-param>  
+	          <param-name>forceEncoding</param-name>  
+	          <param-value>true</param-value>  
+	      </init-param>  
+	  </filter> 
+	  
+	  <!-- 对所有请求有效 --> 
+	  <filter-mapping>  
+	      <filter-name>characterEncodingFilter</filter-name>  
+	      <url-pattern>/*</url-pattern>  
+	  </filter-mapping> 
+
 </web-app>

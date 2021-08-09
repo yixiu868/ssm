@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.ww.spring.model.Role;
+
 public class SpringAnnotationTest {
 
     @SuppressWarnings("resource")

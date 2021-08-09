@@ -1,6 +1,6 @@
 package com.ww.spring.aop.aspectj;
 
-import com.ww.spring.ioc.bean.Role;
+import com.ww.spring.model.Role;
 
 public interface RoleService {
 

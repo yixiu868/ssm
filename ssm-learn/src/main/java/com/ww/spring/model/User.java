@@ -1,4 +1,4 @@
-package com.ww.spring.ioc.bean;
+package com.ww.spring.model;
 
 public class User {
 

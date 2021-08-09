@@ -2,7 +2,7 @@ package com.ww.spring.aop.aspectj;
 
 import org.springframework.stereotype.Component;
 
-import com.ww.spring.ioc.bean.Role;
+import com.ww.spring.model.Role;
 
 @Component
 public class RoleServiceImpl implements RoleService {

@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.ww.spring.ioc.bean.Role;
+import com.ww.spring.model.Role;
 
 public class AspectJAopTest {
 

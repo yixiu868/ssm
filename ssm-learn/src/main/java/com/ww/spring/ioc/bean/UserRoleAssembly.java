@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.ww.spring.model.Role;
+import com.ww.spring.model.User;
+
 public class UserRoleAssembly {
 
     private Long id;
