@@ -7,7 +7,7 @@
 <title>validate</title>
 </head>
 <body>
-    <form action="/validate/annotation.do">
+    <form action="<%=pageContext.getServletContext().getContextPath()%>/validate/annotation.do" method="post" enctype="application/x-www-form-urlencoded">
         <table>
             <tr>
                 <td>产品编号：</td>
