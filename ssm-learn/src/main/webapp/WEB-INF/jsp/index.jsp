@@ -8,5 +8,7 @@
 </head>
 <body>
 <h3>Hello, Spring MVC</h3>
+欢迎：${sessionScope.user.userName }
+<a href="${pageContext.request.contextPath}/user/logout.do">退出</a>
 </body>
 </html>

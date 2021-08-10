@@ -7,6 +7,8 @@ public class User {
     private String userName;
     
     private String note;
+    
+    private String password;
 
     public Long getId() {
         return id;
@@ -32,8 +34,16 @@ public class User {
         this.note = note;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
-        return "User [id=" + id + ", userName=" + userName + ", note=" + note + "]";
+        return "User [id=" + id + ", userName=" + userName + ", note=" + note + ", password=" + password + "]";
     }
 }

@@ -53,5 +53,9 @@
             <mvc:mapping path="/params/*.do" />
             <bean class="com.ww.spring.interceptor.RoleInterceptor3" />
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.ww.spring.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
     </mvc:interceptors>
 </beans>  
