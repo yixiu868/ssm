@@ -17,4 +17,6 @@ public interface RoleService {
     int deleteRole(Long id);
     
     List<Role> queryList(List<Long> idList);
+    
+    int updateBatch(List<Role> roleList);
 }

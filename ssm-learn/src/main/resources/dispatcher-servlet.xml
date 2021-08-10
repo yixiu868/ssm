@@ -19,7 +19,16 @@
             
     <!-- 注解驱动 -->
     <!-- 表示使用注解驱动Spring MVC -->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven conversion-service="conversionService" />
+    
+    <!-- 自定义转换器 -->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.ww.spring.converter.StringToRoleConverter" />
+            </list>
+        </property>
+    </bean>
     
     <!-- 扫描包 -->
     <context:component-scan base-package="com.ww.spring.controller" />

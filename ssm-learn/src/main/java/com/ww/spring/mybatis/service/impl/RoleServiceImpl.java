@@ -2,6 +2,7 @@ package com.ww.spring.mybatis.service.impl;
 
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,6 +76,19 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public List<Role> queryList(List<Long> idList) {
         return roleMapper.queryList(idList);
+    }
+
+    @Override
+    public int updateBatch(List<Role> roleList) {
+        int count = 0;
+        
+        if (CollectionUtils.isNotEmpty(roleList)) {
+            for (Role role : roleList) {
+                count += roleMapper.updateRole(role);
+            }
+        }
+        
+        return count;
     }
 
 }
