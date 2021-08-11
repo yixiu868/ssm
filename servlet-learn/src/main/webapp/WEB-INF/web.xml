@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>HelloServlet</display-name>
     <servlet-name>HelloServlet</servlet-name>
@@ -9,7 +9,7 @@
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/HelloServlet</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <display-name>servlet-learn</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -305,4 +305,13 @@
   <listener>
     <listener-class>com.ww.servlet.listener.function.OnlineCounterListener</listener-class>
   </listener>
+  <!-- <filter>
+    <display-name>HelloWordFilter</display-name>
+    <filter-name>HelloWordFilter</filter-name>
+    <filter-class>com.ww.servlet.filter.HelloWordFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HelloWordFilter</filter-name>
+    <url-pattern>/hello</url-pattern>
+  </filter-mapping> -->
 </web-app>
