@@ -18,20 +18,20 @@
             http://www.springframework.org/schema/aop/spring-aop.xsd "  
     default-autowire="byName">  
     
-    <bean id="beanPostProcessor" class="com.ww.spring.ioc.life.BeanPostProcessorImpl" />
+    <bean id="beanPostProcessor" class="com.ww.spring.ioc.lifecycle.BeanPostProcessorImpl" />
     
     
-    <bean id="disposableBean" class="com.ww.spring.ioc.life.DisposableBeanImpl" />
+    <bean id="disposableBean" class="com.ww.spring.ioc.lifecycle.DisposableBeanImpl" />
     
     
-    <bean id="source" class="com.ww.spring.ioc.life.Source">
+    <bean id="source" class="com.ww.spring.ioc.lifecycle.Source">
         <property name="fruit" value="橙汁" />
         <property name="sugar" value="少糖" />
         <property name="size" value="大杯" />
     </bean>
     
     
-    <bean id="juiceMaker2" class="com.ww.spring.ioc.life.JuiceMaker2" init-method="init" destroy-method="destroy">
+    <bean id="juiceMaker2" class="com.ww.spring.ioc.lifecycle.JuiceMaker2" init-method="init" destroy-method="destroy">
         <property name="beverageShop" value="喜茶" />
         <property name="source" ref="source" />
     </bean>
