@@ -19,7 +19,6 @@ public class BeanUtils {
 	 * @param clazz
 	 * @return
 	 */
-	@SuppressWarnings("deprecation")
 	public static <T> T instanceClass(Class<T> clazz) {
 		if (!clazz.isInterface()) {
 			try {
@@ -86,7 +85,6 @@ public class BeanUtils {
 	 * 构造方法私有设置为可以访问
 	 * @param ctor
 	 */
-	@SuppressWarnings("deprecation")
 	public static void makeAccessible(Constructor<?> ctor) {
 		if ((!Modifier.isPublic(ctor.getModifiers()) || !Modifier.isPublic(ctor.getDeclaringClass().getModifiers()))
 				&& !ctor.isAccessible()) {

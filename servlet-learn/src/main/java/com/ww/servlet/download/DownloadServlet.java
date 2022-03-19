@@ -37,6 +37,7 @@ public class DownloadServlet extends HttpServlet {
 		
 		// 获取真实文件名
 		String realName = filename.substring(filename.indexOf("_") + 1);
+		// 返回下载文件
 		response.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode(realName, "UTF-8"));
 		FileInputStream inputStream = new FileInputStream(path + File.separator + filename);
 		ServletOutputStream outputStream = response.getOutputStream();

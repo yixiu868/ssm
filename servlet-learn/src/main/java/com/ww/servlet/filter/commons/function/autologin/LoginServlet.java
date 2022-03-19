@@ -25,7 +25,9 @@ public class LoginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unused")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		@SuppressWarnings("unused")
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
