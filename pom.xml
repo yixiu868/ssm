@@ -8,6 +8,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
   <modules>
   	<module>servlet-learn</module>
   	<module>ssm-learn</module>
+  	<module>spring-aop-learn</module>
   </modules>
   
   <dependencyManagement>
