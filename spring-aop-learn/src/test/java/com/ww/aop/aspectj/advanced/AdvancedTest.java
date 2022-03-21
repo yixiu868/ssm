@@ -1,6 +1,5 @@
 package com.ww.aop.aspectj.advanced;
 
-import com.ww.aop.NaiveWaiter;
 import com.ww.aop.SmartSeller;
 import com.ww.aop.Waiter;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,6 +13,7 @@ import org.testng.annotations.Test;
  */
 public class AdvancedTest {
 
+    @SuppressWarnings({"unused", "resource"})
     @Test
     public void advance() {
         String configPath = "com/ww/aop/aspectj/advanced/beans.xml";
